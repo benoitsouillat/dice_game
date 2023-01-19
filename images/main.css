@@ -78,9 +78,10 @@ main aside {
   position: absolute;
   top: 5px;
   left: 45%;
+  box-sizing: border-box;
 }
 main aside .actions {
-  height: 100vh;
+  height: calc(100vh - 20px);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -93,6 +94,8 @@ main aside .play {
   justify-content: center;
   align-items: center;
   height: 30vh;
+  width: 150px;
+  max-width: 150px;
 }
 main aside a {
   margin-top: 5vh;
@@ -106,9 +109,11 @@ main aside a .bi {
 }
 main #playerone {
   background-color: #f2f2f2;
+  width: 50%;
 }
 main #playertwo {
   background-color: #fafafa;
+  width: 48%;
 }
 main .global-score {
   margin-top: 20px;
