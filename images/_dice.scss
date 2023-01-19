@@ -1,0 +1,40 @@
+@import "_variables";
+
+.dot {
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: $red;
+        justify-self: center;
+        align-self: center;
+    }
+    .dot-center {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .dot-top-left {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    .dot-top-right {
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+    .dot-bot-left {
+        grid-column: 1/2;
+        grid-row: 3/4;
+    }
+    .dot-bot-right {
+        grid-column: 3/4;
+        grid-row: 3/4;
+    }
+    .dot-six-left {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .dot-six-right {
+        grid-column: 3/4;
+        grid-row: 2/3;
+    }
+

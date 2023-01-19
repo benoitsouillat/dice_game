@@ -2,6 +2,51 @@
   font-family: Lato;
   src: url("/images/Lato/Lato-Light.ttf") format("ttf");
 }
+.dot {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ff4d4d;
+  justify-self: center;
+  align-self: center;
+}
+
+.dot-center {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.dot-top-left {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.dot-top-right {
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+
+.dot-bot-left {
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+
+.dot-bot-right {
+  grid-column: 3/4;
+  grid-row: 3/4;
+}
+
+.dot-six-left {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.dot-six-right {
+  grid-column: 3/4;
+  grid-row: 2/3;
+}
+
 body {
   font-family: Lato;
   border: solid 15px transparent;
@@ -119,5 +164,10 @@ main .hide-element {
 main #dice {
   width: 80px;
   height: 80px;
+  padding: 10px;
   box-shadow: #737373 1px 1px 150px;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
 }

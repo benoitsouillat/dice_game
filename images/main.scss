@@ -1,11 +1,4 @@
-@font-face {
-    font-family: Lato;
-    src: url("/images/Lato/Lato-Light.ttf") format("ttf");
-}
-
-$gradient-border: linear-gradient(to right bottom, goldenrod, darken(goldenrod, 40));
-$red: lighten(red, 15);
-
+@import "_dice";
 
 body {
     font-family: Lato;
@@ -131,7 +124,14 @@ main {
     #dice {
         width: 80px;
         height: 80px;
+        padding: 10px;
         box-shadow: lighten($color: #000000, $amount: 45) 1px 1px 150px;
+        background-color: #fff;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+
     }
 
 }

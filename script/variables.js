@@ -1,7 +1,6 @@
 var newGame = document.getElementById('new_game');
 var roll = document.getElementById('roll');
 var hold = document.getElementById('hold');
-var dice = document.getElementById('dice');
 var dotP1 = document.getElementById('playerone').getElementsByClassName('bi')[0];
 var dotP2 = document.getElementById('playertwo').getElementsByClassName('bi')[0];
 var textP1 = document.getElementById('playerone').getElementsByClassName('player')[0];
@@ -12,6 +11,7 @@ var playerTwoRound = document.getElementById("round-score-p2");
 var playerOneGlobal = document.getElementById("gscore1");
 var playerTwoGlobal = document.getElementById("gscore2");
 
+
 class Player{
     constructor(name, globalScore, currentScore) {
         this.name = name
@@ -20,6 +20,27 @@ class Player{
     }
    
 }
+
+/* class Dice{
+    constructor(center, topLeft, topRight, botLeft, botRight, sixLeft, sixRight, dice)
+    {
+        this.center = center
+        this.topLeft = topLeft
+        this.topRight = topRight
+        this.botLeft = botLeft
+        this.botRight = botRight
+        this.sixLeft = sixLeft
+        this.sixRight = sixRight
+        this.dice = dice
+    }
+    addHide()
+    {
+        elm.classList.add('hide-element');
+
+    }
+    removeHide()
+    {
+} */
 
 class Game{
     constructor(playerOne, playerTwo)
@@ -30,6 +51,7 @@ class Game{
         this.dice = 1
        
     }
+
     switchPlayer()
     {
         if(this.activPlayer === this.playerOne)
@@ -75,7 +97,6 @@ class Game{
     {
         if(this.activPlayer.globalScore >= 100)
         {
-            console.log(this.activPlayer.name + " a gagné la partie");
             roll.classList.add('hide-element');
             hold.classList.add('hide-element');
             winner.textContent = "Le joueur " + this.activPlayer.name + " a gagné la partie avec un score de " + this.activPlayer.globalScore;
@@ -84,6 +105,61 @@ class Game{
         }
         this.switchPlayer();
     }
+    hideAll()
+    {
+        center.classList.add('hide-element');
+        topLeft.classList.add('hide-element');
+        topRight.classList.add('hide-element');
+        botLeft.classList.add('hide-element');
+        botRight.classList.add('hide-element');
+        sixLeft.classList.add('hide-element');
+        sixRight.classList.add('hide-element');
+    }
+    removeAll()
+    {
+        center.classList.remove('hide-element');
+        topLeft.classList.remove('hide-element');
+        topRight.classList.remove('hide-element');
+        botLeft.classList.remove('hide-element');
+        botRight.classList.remove('hide-element');
+        sixLeft.classList.remove('hide-element');
+        sixRight.classList.remove('hide-element');
+    }
+    displayOne()
+    {
+        this.hideAll();
+        center.classList.remove('hide-element');
+    }
+    displayTwo()
+    {
+        this.hideAll();
+        topLeft.classList.remove('hide-element');
+        botRight.classList.remove('hide-element');
+    }
+    displayThree()
+    {
+        this.displayTwo();
+        center.classList.remove('hide-element');
+
+    }
+    displayFour()
+    {
+        this.displayTwo();
+        botLeft.classList.remove('hide-element');
+        topRight.classList.remove('hide-element');
+    }
+    displayFive()
+    {
+        this.removeAll();
+        sixLeft.classList.add('hide-element');
+        sixRight.classList.add('hide-element');
+    }
+    displaySix()
+    {
+        this.removeAll();
+        center.classList.add('hide-element');
+    }
+
 }
 
 let playerOne = new Player("Player 1", 0, 0);

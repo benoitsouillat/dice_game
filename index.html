@@ -33,7 +33,15 @@
                 <div>
                     <a href="#" id="new_game"><i class="bi bi-plus-circle"></i> NEW GAME</a>
                 </div>
-                <div id="dice"></div>
+                <div id="dice">
+                    <span class="dot dot-center hide-element"></span>
+                    <span class="dot dot-top-left hide-element"></span>
+                    <span class="dot dot-top-right hide-element"></span>
+                    <span class="dot dot-bot-left hide-element"></span>
+                    <span class="dot dot-bot-right hide-element"></span>
+                    <span class="dot dot-six-left hide-element"></span>
+                    <span class="dot dot-six-right hide-element"></span>
+                </div>
                 <div class="play">
                     <a href="#" id="roll"><i class="bi bi-arrow-repeat"></i>ROLL DICE</a>
                     <a href="#" id="hold"><i class="bi bi-box-arrow-in-down"></i>HOLD</a>
@@ -66,6 +74,7 @@
         crossorigin="anonymous"></script>
 
     <!--     Game's Scripts -->
+    <script src="./script/dice.js"></script>
     <script src="./script/variables.js"></script>
     <script src="./script/fonction.js"></script>
     <script src="./script/game.js"></script>
