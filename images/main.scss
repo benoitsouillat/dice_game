@@ -1,4 +1,84 @@
+@font-face {
+    font-family: Lato;
+    src: url("/images/Lato/Lato-Light.ttf") format("ttf");
+}
+
+$gradient-border: linear-gradient(to right bottom, goldenrod, darken(goldenrod, 40));
+$red: lighten(red, 15);
+
+
+body {
+    font-family: Lato;
+    border: solid 15px transparent;
+    background: $gradient-border;
+    border-top-width: 8px;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 main {
-    color: red;
-    text-align: left;
+    width: 100%;
+    height: calc(100vh - 20px);
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    aside {
+        display: block;
+        position: absolute;
+        top: 5px;
+        left: 45%;
+        .d-flex {
+            height: 100vh;
+        }
+    }
+
+    #playerone {
+        background-color: lighten(lightgrey, 12);
+    }
+    #playertwo {
+        background-color: darken(#fff, 2);
+    }
+
+    .global-score {
+        margin-top: 20px;
+        font-size: 3em;
+    }
+    .div-score {
+        display: flex;
+        flex-direction: column;
+        p {
+            color: $red;
+        }
+    }
+
+    .round-score {
+        display: flex;
+        justify-content: row;
+        justify-content: center;
+        align-items: center;
+        .round-div {
+            background-color: $red;
+            color: white;
+            width: 120px;
+            height: 80px;
+        }
+        .current {
+            margin-top: 5px;
+            font-size: .8em;
+            color: #000;
+        }
+    }
+
+
 }

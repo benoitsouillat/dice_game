@@ -1,4 +1,73 @@
+@font-face {
+  font-family: Lato;
+  src: url("/images/Lato/Lato-Light.ttf") format("ttf");
+}
+body {
+  font-family: Lato;
+  border: solid 15px transparent;
+  background: linear-gradient(to right bottom, goldenrod, #281e06);
+  border-top-width: 8px;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 main {
-  color: red;
-  text-align: left;
+  width: 100%;
+  height: calc(100vh - 20px);
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+}
+main section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+main aside {
+  display: block;
+  position: absolute;
+  top: 5px;
+  left: 45%;
+}
+main aside .d-flex {
+  height: 100vh;
+}
+main #playerone {
+  background-color: #f2f2f2;
+}
+main #playertwo {
+  background-color: #fafafa;
+}
+main .global-score {
+  margin-top: 20px;
+  font-size: 3em;
+}
+main .div-score {
+  display: flex;
+  flex-direction: column;
+}
+main .div-score p {
+  color: #ff4d4d;
+}
+main .round-score {
+  display: flex;
+  justify-content: row;
+  justify-content: center;
+  align-items: center;
+}
+main .round-score .round-div {
+  background-color: #ff4d4d;
+  color: white;
+  width: 120px;
+  height: 80px;
+}
+main .round-score .current {
+  margin-top: 5px;
+  font-size: 0.8em;
+  color: #000;
 }
