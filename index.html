@@ -18,24 +18,25 @@
         <section id="playerone" class="w-50">
             <div class="div-score">
                 <h1>PLAYER 1</h1>
-                <p class="global-score">0</p>
+                <p class="global-score" id="gscore1">0</p>
             </div>
             <div class="round-score">
                 <div class="round-div">
                     <p class="current">CURRENT</p>
-                    <p>0</p>
+                    <p id="round-score-p1">0</p>
                 </div>
             </div>
         </section>
         <aside>
             <div class="d-flex flex-column justify-content-around align-item-center">
                 <div>
-                    <p id="new_game"> NEW GAME</p>
+                    <a href="#" id="new_game"> NEW GAME</a>
                 </div>
-                <div>Un dés</div>
-                <div>
-                    <p id="roll">ROLL DICE</p>
-                    <p id="hold">HOLD</p>
+                <div id="dice">Un dés</div>
+                <div class="d-flex flex-column justify-content-center align-item-center">
+                    <a href="#" id="roll">ROLL DICE</a>
+                    <a href="#" id="hold">HOLD</a>
+                    <p id="winner" class="hide-element"> Victoire </p>
                 </div>
 
             </div>
@@ -44,12 +45,12 @@
         <section id="playertwo" class="w-50">
             <div class="div-score">
                 <h1>PLAYER 2</h1>
-                <p class="global-score">0</p>
+                <p class="global-score" id="gscore2">0</p>
             </div>
             <div class="round-score">
                 <div class="round-div">
                     <p class="current">CURRENT</p>
-                    <p>0</p>
+                    <p id="round-score-p2">0</p>
                 </div>
             </div>
         </section>
