@@ -50,6 +50,25 @@ main .global-score {
 main .div-score {
   display: flex;
   flex-direction: column;
+  width: 100%;
+}
+main .div-score .player {
+  color: grey;
+  font-size: calc(1.375rem + 1.5vw);
+}
+main .div-score .active {
+  position: relative;
+  left: 8%;
+  color: #000;
+}
+@media all and (min-width: 800px) {
+  main .div-score .active {
+    left: 5%;
+  }
+}
+main .div-score .bi {
+  color: #ff4d4d;
+  font-size: 0.8em;
 }
 main .div-score p {
   color: #ff4d4d;
@@ -62,14 +81,14 @@ main .round-score {
 }
 main .round-score .round-div {
   background-color: #ff4d4d;
-  color: white;
+  color: #000;
   width: 120px;
   height: 80px;
+  padding: 10px;
 }
 main .round-score .current {
-  margin-top: 5px;
-  font-size: 0.8em;
-  color: #000;
+  color: #fff;
+  font-size: 1.4em;
 }
 main .hide-element {
   display: none;

@@ -1,6 +1,10 @@
 function startGame(e) {
     e.preventDefault();
     e.stopPropagation();
+    textP1.classList.add('active');
+    textP2.classList.remove('active');
+    dotP1.classList.remove('hide-element');
+    dotP2.classList.add('hide-element');
     game.start();
 };
 
@@ -13,6 +17,7 @@ function rollDice(e) {
     }
     else {
         game.activPlayer.currentScore = 0;
+        game.displayScore();
         game.switchPlayer();
     }
     game.displayScore();

@@ -2,9 +2,11 @@ var newGame = document.getElementById('new_game');
 var roll = document.getElementById('roll');
 var hold = document.getElementById('hold');
 var dice = document.getElementById('dice');
+var dotP1 = document.getElementById('playerone').getElementsByClassName('bi')[0];
+var dotP2 = document.getElementById('playertwo').getElementsByClassName('bi')[0];
+var textP1 = document.getElementById('playerone').getElementsByClassName('player')[0];
+var textP2 = document.getElementById('playertwo').getElementsByClassName('player')[0];
 var winner = document.getElementById('winner');
-var playerHONE = document.getElementById('playerone').getElementsByTagName('h1');
-var playerHTWO = document.getElementById('playertwo').getElementsByTagName('h1');
 var playerOneRound = document.getElementById("round-score-p1");
 var playerTwoRound = document.getElementById("round-score-p2");
 var playerOneGlobal = document.getElementById("gscore1");
@@ -33,9 +35,17 @@ class Game{
         if(this.activPlayer === this.playerOne)
         {
             this.activPlayer = this.playerTwo
+            dotP1.classList.add('hide-element');
+            dotP2.classList.remove('hide-element');
+            textP1.classList.remove('active')
+            textP2.classList.add('active');
         }
         else {
             this.activPlayer = this.playerOne
+            dotP1.classList.remove('hide-element');
+            dotP2.classList.add('hide-element');
+            textP2.classList.remove('active')
+            textP1.classList.add('active');
         }
     }
     displayScore()
@@ -63,7 +73,7 @@ class Game{
     }
     checkScore()
     {
-        if(this.activPlayer.globalScore >= 10)
+        if(this.activPlayer.globalScore >= 100)
         {
             console.log(this.activPlayer.name + " a gagné la partie");
             roll.classList.add('hide-element');

@@ -57,6 +57,25 @@ main {
     .div-score {
         display: flex;
         flex-direction: column;
+        width: 100%;
+        .player {
+            color: grey;
+            font-size: calc(1.375rem + 1.5vw);
+        }
+        .active {
+            position: relative;
+            left: 8%;
+            color: #000;
+            @media all and (min-width: 800px)
+            {
+                left: 5%;
+            }
+        }
+        .bi {
+            color: $red;
+            font-size: .8em;
+        }
+
         p {
             color: $red;
         }
@@ -69,14 +88,15 @@ main {
         align-items: center;
         .round-div {
             background-color: $red;
-            color: white;
+            color: #000;
             width: 120px;
             height: 80px;
+            padding: 10px;
         }
         .current {
-            margin-top: 5px;
-            font-size: .8em;
-            color: #000;
+            color: #fff;
+            font-size: 1.4em;
+            
         }
     }
 
