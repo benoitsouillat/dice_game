@@ -34,7 +34,23 @@ main aside {
   top: 5px;
   left: 45%;
 }
+main aside .actions {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;
+}
+main aside .play {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+}
 main aside a {
+  margin-top: 5vh;
   color: #000;
   text-decoration: none;
 }
@@ -42,9 +58,6 @@ main aside a .bi {
   color: #ff4d4d;
   padding: 10px;
   margin: 5px;
-}
-main aside .d-flex {
-  height: 100vh;
 }
 main #playerone {
   background-color: #f2f2f2;
@@ -102,4 +115,9 @@ main .round-score .current {
 main .hide-element {
   display: none;
   overflow: hidden;
+}
+main #dice {
+  width: 80px;
+  height: 80px;
+  box-shadow: #737373 1px 1px 150px;
 }
